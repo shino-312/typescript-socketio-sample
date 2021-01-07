@@ -1,0 +1,33 @@
+{
+  "name": "typescript-socketio-sample",
+  "version": "1.0.0",
+  "description": "Minimum sample using SocketIO in TypeScript",
+  "main": "",
+  "scripts": {
+    "build": "tsc ./src/server.ts; tsc ./src/client.ts",
+    "server": "nodemon ./src/server.js",
+    "client": "nodemon ./src/client.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shino-312/typescript-socketio-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shino-312/typescript-socketio-sample/issues"
+  },
+  "homepage": "https://github.com/shino-312/typescript-socketio-sample#readme",
+  "dependencies": {
+    "@types/node": "^14.14.20",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "socket.io": "^3.0.5",
+    "socket.io-client": "^3.0.5",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
