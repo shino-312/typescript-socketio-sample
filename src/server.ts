@@ -9,7 +9,7 @@ const io = socketio(server, options);
 
 let counter = 0;
 
-io.on('connection', (socket: any) => {
+io.of('/my-namespace').on('connection', (socket: any) => {
   console.log('Someone connected');
   socket.emit('connect_ack', counter++);
 })
