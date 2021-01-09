@@ -11,6 +11,11 @@ let counter = 0;
 
 io.of('/my-namespace').on('connection', (socket: any) => {
   console.log('Someone connected');
+
+  console.log('firstname:', socket.handshake.query.firstname);
+  console.log('age      :', socket.handshake.query.age);
+  console.log('sex      :', socket.handshake.query.sex);  // undefined
+
   socket.emit('connect_ack', counter++);
 })
 
