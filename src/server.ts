@@ -9,6 +9,20 @@ const io = socketio(server, options);
 
 let counter = 0;
 
+io.of('/my-namespace').use((socket, next) => {
+  console.log('===============');
+  console.log('In middleware');
+  console.log('===============');
+  next();
+})
+
+io.of('/my-namespace').use((socket, next) => {
+  console.log('===============');
+  console.log('In middleware 2');
+  console.log('===============');
+  next();
+})
+
 io.of('/my-namespace').on('connection', (socket: any) => {
   console.log('Someone connected');
 
